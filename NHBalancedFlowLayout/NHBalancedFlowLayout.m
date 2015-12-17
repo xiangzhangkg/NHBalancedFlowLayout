@@ -66,9 +66,14 @@
 
 - (void)initialize
 {
+    // Initial value
+    _numberOfRows = NSIntegerMax;
+    _maxHeightWhenSingle = CGFLOAT_MAX;
+    _scrollDirection = UICollectionViewScrollDirectionVertical;
     // set to NULL so it is not released by accident in dealloc
     _itemFrameSections = NULL;
     
+    // Default value
     self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     self.minimumLineSpacing = 10;
     self.minimumInteritemSpacing = 10;
@@ -124,8 +129,10 @@
         }
         [headerFrames addObject:[NSValue valueWithCGRect:headerFrame]];
         
-        CGFloat totalItemSize = [self totalItemSizeForSection:section preferredRowSize:idealHeight];
-        NSInteger numberOfRows = MAX(roundf(totalItemSize / [self viewPortAvailableSize]), 1);
+        if (_numberOfRows == NSIntegerMax) {
+            CGFloat totalItemSize = [self totalItemSizeForSection:section preferredRowSize:idealHeight];
+            _numberOfRows = MAX(roundf(totalItemSize / [self viewPortAvailableSize]), 1);
+        }
     
         CGPoint sectionOffset;
         if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
@@ -134,7 +141,7 @@
             sectionOffset = CGPointMake(contentSize.width + headerSize.width, 0);
         }
         
-        [self setFrames:itemFrames forItemsInSection:section numberOfRows:numberOfRows sectionOffset:sectionOffset sectionSize:&sectionSize];
+        [self setFrames:itemFrames forItemsInSection:section numberOfRows:_numberOfRows sectionOffset:sectionOffset sectionSize:&sectionSize];
         
         CGSize footerSize = [self referenceSizeForFooterInSection:section];
         CGRect footerFrame;
@@ -157,6 +164,9 @@
     self.footerFrames = [footerFrames copy];
     
     self.contentSize = contentSize;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(finishCalculateContentSize:)]) {
+        [self.delegate finishCalculateContentSize:contentSize];
+    }
 }
 
 - (CGSize)collectionViewContentSize
@@ -308,10 +318,10 @@
             
             CGSize actualSize = CGSizeZero;
             if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
-                actualSize = CGSizeMake(roundf(rowSize / summedRatios * (preferredSize.width / preferredSize.height)), roundf(rowSize / summedRatios));
+                actualSize = CGSizeMake(roundf(rowSize / summedRatios * (preferredSize.width / preferredSize.height)), MIN(_maxHeightWhenSingle, roundf(rowSize / summedRatios)));
             }
             else {
-                actualSize = CGSizeMake(roundf(rowSize / summedRatios), roundf(rowSize / summedRatios * (preferredSize.height / preferredSize.width)));
+                actualSize = CGSizeMake(MIN(_maxHeightWhenSingle, roundf(rowSize / summedRatios)), roundf(rowSize / summedRatios * (preferredSize.height / preferredSize.width)));
             }
             
             CGRect frame = CGRectMake(offset.x, offset.y, actualSize.width, actualSize.height);
@@ -380,6 +390,18 @@
 }
 
 #pragma mark - Custom setters
+
+- (void)setNumberOfRows:(NSInteger)numberOfRows {
+    _numberOfRows = numberOfRows;
+    
+    [self invalidateLayout];
+}
+
+- (void)setMaxHeightWhenSingle:(CGFloat)maxHeightWhenSingle {
+    _maxHeightWhenSingle = maxHeightWhenSingle;
+    
+    [self invalidateLayout];
+}
 
 - (void)setPreferredRowSize:(CGFloat)preferredRowHeight
 {

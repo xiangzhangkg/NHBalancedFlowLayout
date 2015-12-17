@@ -18,6 +18,12 @@
  */
 @interface NHBalancedFlowLayout : UICollectionViewLayout
 
+// The number of collage rows
+@property(nonatomic, assign) NSInteger numberOfRows;
+
+// The max height when there is a single photo
+@property(nonatomic, assign) CGFloat maxHeightWhenSingle;
+
 // The preferred size for each row measured in the scroll direction
 @property (nonatomic) CGFloat preferredRowSize;
 
@@ -48,5 +54,7 @@
 
 @required
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(NHBalancedFlowLayout *)collectionViewLayout preferredSizeForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)finishCalculateContentSize:(CGSize)aSize;
 
 @end

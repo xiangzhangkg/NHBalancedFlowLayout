@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C107F1AED548B311B31E842 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE24ECFD3B28DD88B85C71BF /* libPods.a */; };
 		50CAF4C8180430A6009A7FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAF4C7180430A6009A7FA1 /* Foundation.framework */; };
 		50CAF4CA180430A6009A7FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAF4C9180430A6009A7FA1 /* CoreGraphics.framework */; };
 		50CAF4CC180430A6009A7FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAF4CB180430A6009A7FA1 /* UIKit.framework */; };
@@ -19,6 +20,12 @@
 		50CAF4E8180430A6009A7FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAF4C7180430A6009A7FA1 /* Foundation.framework */; };
 		50CAF4E9180430A6009A7FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAF4CB180430A6009A7FA1 /* UIKit.framework */; };
 		50CAF4F1180430A6009A7FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50CAF4EF180430A6009A7FA1 /* InfoPlist.strings */; };
+		CE0451F41C225D3D00E20449 /* NHCollagePreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0451F31C225D3D00E20449 /* NHCollagePreView.m */; };
+		CE0451FC1C22633900E20449 /* NHCollagePreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0451FB1C22633900E20449 /* NHCollagePreView.xib */; };
+		CE0451FF1C228A3E00E20449 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0451FE1C228A3E00E20449 /* DemoViewController.m */; };
+		CE0452011C22976700E20449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0452001C22976700E20449 /* LaunchScreen.storyboard */; };
+		CE0452361C22AF0E00E20449 /* NHCollageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0452341C22AF0E00E20449 /* NHCollageCell.m */; };
+		CE0452371C22AF0E00E20449 /* NHCollageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0452351C22AF0E00E20449 /* NHCollageCell.xib */; };
 		FD607149181E4C8B00593765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD607148181E4C8B00593765 /* Main.storyboard */; };
 		FD9D1F69181FBFC600F17457 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9D1F68181FBFC600F17457 /* ImageCell.m */; };
 		FD9D1F84181FC08500F17457 /* photo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD9D1F6C181FC08500F17457 /* photo-01.jpg */; };
@@ -49,6 +56,7 @@
 		FDC8070E182B84C600ADF578 /* NHLinearPartition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC8070C182B84C600ADF578 /* NHLinearPartition.m */; };
 		FDDD339B18218D6500314905 /* UIImage+Decompression.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDD339A18218D6500314905 /* UIImage+Decompression.m */; };
 		FDFDF5141851D25500922D68 /* LinearPartitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDF5131851D25500922D68 /* LinearPartitionTests.m */; };
+		FEC5FB7B1C23172500F9261D /* NHCollagePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5FB7A1C23172500F9261D /* NHCollagePhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +87,19 @@
 		50CAF4E6180430A6009A7FA1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		50CAF4EE180430A6009A7FA1 /* BalancedFlowLayoutDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BalancedFlowLayoutDemoTests-Info.plist"; sourceTree = "<group>"; };
 		50CAF4F0180430A6009A7FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BFA1E35AAB46440959A6E31 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		859554C13919DEE15CDC76ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AE24ECFD3B28DD88B85C71BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0451F21C225D3D00E20449 /* NHCollagePreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHCollagePreView.h; sourceTree = "<group>"; };
+		CE0451F31C225D3D00E20449 /* NHCollagePreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHCollagePreView.m; sourceTree = "<group>"; };
+		CE0451FB1C22633900E20449 /* NHCollagePreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHCollagePreView.xib; sourceTree = "<group>"; };
+		CE0451FD1C228A3E00E20449 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		CE0451FE1C228A3E00E20449 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		CE0452001C22976700E20449 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE0452331C22AF0E00E20449 /* NHCollageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHCollageCell.h; sourceTree = "<group>"; };
+		CE0452341C22AF0E00E20449 /* NHCollageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHCollageCell.m; sourceTree = "<group>"; };
+		CE0452351C22AF0E00E20449 /* NHCollageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHCollageCell.xib; sourceTree = "<group>"; };
+		CE40C09C1C240E1C00AD7743 /* NHCollagePreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHCollagePreViewDelegate.h; sourceTree = "<group>"; };
 		FD607148181E4C8B00593765 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FD9D1F67181FBFC600F17457 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		FD9D1F68181FBFC600F17457 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
@@ -113,6 +134,8 @@
 		FDDD339918218D6500314905 /* UIImage+Decompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompression.h"; sourceTree = "<group>"; };
 		FDDD339A18218D6500314905 /* UIImage+Decompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompression.m"; sourceTree = "<group>"; };
 		FDFDF5131851D25500922D68 /* LinearPartitionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearPartitionTests.m; sourceTree = "<group>"; };
+		FEC5FB791C23172500F9261D /* NHCollagePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHCollagePhoto.h; sourceTree = "<group>"; };
+		FEC5FB7A1C23172500F9261D /* NHCollagePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHCollagePhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +146,7 @@
 				50CAF4CA180430A6009A7FA1 /* CoreGraphics.framework in Frameworks */,
 				50CAF4CC180430A6009A7FA1 /* UIKit.framework in Frameworks */,
 				50CAF4C8180430A6009A7FA1 /* Foundation.framework in Frameworks */,
+				1C107F1AED548B311B31E842 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +172,7 @@
 				50CAF4EC180430A6009A7FA1 /* NHBalancedFlowLayoutDemoTests */,
 				50CAF4C6180430A6009A7FA1 /* Frameworks */,
 				50CAF4C5180430A6009A7FA1 /* Products */,
+				9DF3BC3BB1C55537F15C25B7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +192,7 @@
 				50CAF4C9180430A6009A7FA1 /* CoreGraphics.framework */,
 				50CAF4CB180430A6009A7FA1 /* UIKit.framework */,
 				50CAF4E6180430A6009A7FA1 /* XCTest.framework */,
+				AE24ECFD3B28DD88B85C71BF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,6 +205,8 @@
 				FD607148181E4C8B00593765 /* Main.storyboard */,
 				50CAF4DC180430A6009A7FA1 /* ViewController.h */,
 				50CAF4DD180430A6009A7FA1 /* ViewController.m */,
+				CE0451FD1C228A3E00E20449 /* DemoViewController.h */,
+				CE0451FE1C228A3E00E20449 /* DemoViewController.m */,
 				FD9D1F67181FBFC600F17457 /* ImageCell.h */,
 				FD9D1F68181FBFC600F17457 /* ImageCell.m */,
 				FDDD339918218D6500314905 /* UIImage+Decompression.h */,
@@ -196,6 +224,7 @@
 				50CAF4D0180430A6009A7FA1 /* InfoPlist.strings */,
 				50CAF4D3180430A6009A7FA1 /* main.m */,
 				50CAF4D5180430A6009A7FA1 /* NHBalancedFlowLayoutDemo-Prefix.pch */,
+				CE0452001C22976700E20449 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,6 +245,15 @@
 				50CAF4EF180430A6009A7FA1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DF3BC3BB1C55537F15C25B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				859554C13919DEE15CDC76ED /* Pods.debug.xcconfig */,
+				7BFA1E35AAB46440959A6E31 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FD9D1F6A181FC08500F17457 /* Resources */ = {
@@ -264,6 +302,15 @@
 				FDC8070A182B84C600ADF578 /* NHBalancedFlowLayout.m */,
 				FDC8070B182B84C600ADF578 /* NHLinearPartition.h */,
 				FDC8070C182B84C600ADF578 /* NHLinearPartition.m */,
+				FEC5FB791C23172500F9261D /* NHCollagePhoto.h */,
+				FEC5FB7A1C23172500F9261D /* NHCollagePhoto.m */,
+				CE0452331C22AF0E00E20449 /* NHCollageCell.h */,
+				CE0452341C22AF0E00E20449 /* NHCollageCell.m */,
+				CE0452351C22AF0E00E20449 /* NHCollageCell.xib */,
+				CE40C09C1C240E1C00AD7743 /* NHCollagePreViewDelegate.h */,
+				CE0451F21C225D3D00E20449 /* NHCollagePreView.h */,
+				CE0451F31C225D3D00E20449 /* NHCollagePreView.m */,
+				CE0451FB1C22633900E20449 /* NHCollagePreView.xib */,
 			);
 			name = NHBalancedFlowLayout;
 			path = ../NHBalancedFlowLayout;
@@ -276,9 +323,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50CAF4F6180430A6009A7FA1 /* Build configuration list for PBXNativeTarget "NHBalancedFlowLayoutDemo" */;
 			buildPhases = (
+				560630B342E3A3188357AA3D /* Check Pods Manifest.lock */,
 				50CAF4C0180430A6009A7FA1 /* Sources */,
 				50CAF4C1180430A6009A7FA1 /* Frameworks */,
 				50CAF4C2180430A6009A7FA1 /* Resources */,
+				91B14B017F3FF2839F7D1562 /* Embed Pods Frameworks */,
+				64EBFA713348AD498734C478 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +366,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Niels de Hoog";
 				TargetAttributes = {
+					50CAF4C3180430A6009A7FA1 = {
+						DevelopmentTeam = QJUN2PW3ZH;
+					};
 					50CAF4E4180430A6009A7FA1 = {
 						TestTargetID = 50CAF4C3180430A6009A7FA1;
 					};
@@ -348,6 +401,7 @@
 				FD9D1F93181FC08500F17457 /* photo-16.jpg in Resources */,
 				FD607149181E4C8B00593765 /* Main.storyboard in Resources */,
 				FD9D1F86181FC08500F17457 /* photo-03.jpg in Resources */,
+				CE0452371C22AF0E00E20449 /* NHCollageCell.xib in Resources */,
 				FD9D1F9A181FC08500F17457 /* photo-23.jpg in Resources */,
 				50CAF4E0180430A6009A7FA1 /* Images.xcassets in Resources */,
 				FD9D1F8D181FC08500F17457 /* photo-10.jpg in Resources */,
@@ -361,7 +415,9 @@
 				FD9D1F9B181FC08500F17457 /* photo-24.jpg in Resources */,
 				FD9D1F91181FC08500F17457 /* photo-14.jpg in Resources */,
 				FD9D1F98181FC08500F17457 /* photo-21.jpg in Resources */,
+				CE0451FC1C22633900E20449 /* NHCollagePreView.xib in Resources */,
 				FD9D1F85181FC08500F17457 /* photo-02.jpg in Resources */,
+				CE0452011C22976700E20449 /* LaunchScreen.storyboard in Resources */,
 				FD9D1F96181FC08500F17457 /* photo-19.jpg in Resources */,
 				FD9D1F84181FC08500F17457 /* photo-01.jpg in Resources */,
 				FD9D1F87181FC08500F17457 /* photo-04.jpg in Resources */,
@@ -385,6 +441,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		560630B342E3A3188357AA3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64EBFA713348AD498734C478 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91B14B017F3FF2839F7D1562 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50CAF4C0180430A6009A7FA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -394,9 +498,13 @@
 				50CAF4D8180430A6009A7FA1 /* AppDelegate.m in Sources */,
 				FDC8070E182B84C600ADF578 /* NHLinearPartition.m in Sources */,
 				FD9D1F69181FBFC600F17457 /* ImageCell.m in Sources */,
+				CE0451F41C225D3D00E20449 /* NHCollagePreView.m in Sources */,
 				50CAF4D4180430A6009A7FA1 /* main.m in Sources */,
+				CE0451FF1C228A3E00E20449 /* DemoViewController.m in Sources */,
 				FDDD339B18218D6500314905 /* UIImage+Decompression.m in Sources */,
+				FEC5FB7B1C23172500F9261D /* NHCollagePhoto.m in Sources */,
 				FDC8070D182B84C600ADF578 /* NHBalancedFlowLayout.m in Sources */,
+				CE0452361C22AF0E00E20449 /* NHCollageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,14 +622,18 @@
 		};
 		50CAF4F7180430A6009A7FA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 859554C13919DEE15CDC76ED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHBalancedFlowLayoutDemo/NHBalancedFlowLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "NHBalancedFlowLayoutDemo/NHBalancedFlowLayoutDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiangzhangkg.NHBalancedFlowLayoutDemo;
 				PRODUCT_NAME = NHBalancedFlowLayoutDemo;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,14 +641,18 @@
 		};
 		50CAF4F8180430A6009A7FA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BFA1E35AAB46440959A6E31 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHBalancedFlowLayoutDemo/NHBalancedFlowLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "NHBalancedFlowLayoutDemo/NHBalancedFlowLayoutDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiangzhangkg.NHBalancedFlowLayoutDemo;
 				PRODUCT_NAME = NHBalancedFlowLayoutDemo;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

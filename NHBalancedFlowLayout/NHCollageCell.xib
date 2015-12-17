@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NHCollageCell" id="gTV-IL-0wX" customClass="NHCollageCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-7w-6zx" userLabel="imageView">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-n3-VqS" userLabel="moreLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="150"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ejf-ot-ORL">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8O3-7w-6zx" secondAttribute="bottom" id="Ahj-UO-Yzo"/>
+                <constraint firstItem="8O3-7w-6zx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CfU-Wl-xZa"/>
+                <constraint firstAttribute="trailing" secondItem="8O3-7w-6zx" secondAttribute="trailing" id="Fhr-j0-q4Z"/>
+                <constraint firstItem="FYw-n3-VqS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FiN-U3-XVm"/>
+                <constraint firstAttribute="trailing" secondItem="Ejf-ot-ORL" secondAttribute="trailing" id="InL-jh-4wJ"/>
+                <constraint firstItem="Ejf-ot-ORL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RWc-em-o2y"/>
+                <constraint firstAttribute="trailing" secondItem="FYw-n3-VqS" secondAttribute="trailing" id="aOb-RE-bIn"/>
+                <constraint firstItem="FYw-n3-VqS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d4f-VV-fgI"/>
+                <constraint firstItem="Ejf-ot-ORL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dv8-r9-meB"/>
+                <constraint firstAttribute="bottom" secondItem="FYw-n3-VqS" secondAttribute="bottom" id="fxM-sD-fQJ"/>
+                <constraint firstAttribute="bottom" secondItem="Ejf-ot-ORL" secondAttribute="bottom" id="l8Q-Qz-jiX"/>
+                <constraint firstItem="8O3-7w-6zx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qyo-RR-Pyj"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicatorView" destination="Ejf-ot-ORL" id="g83-WG-tTL"/>
+                <outlet property="imageView" destination="8O3-7w-6zx" id="5gn-hV-co0"/>
+                <outlet property="moreLabel" destination="FYw-n3-VqS" id="hev-5G-Sf0"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
