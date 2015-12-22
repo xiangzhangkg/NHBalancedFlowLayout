@@ -56,6 +56,8 @@
 		FDC8070E182B84C600ADF578 /* NHLinearPartition.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC8070C182B84C600ADF578 /* NHLinearPartition.m */; };
 		FDDD339B18218D6500314905 /* UIImage+Decompression.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDD339A18218D6500314905 /* UIImage+Decompression.m */; };
 		FDFDF5141851D25500922D68 /* LinearPartitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFDF5131851D25500922D68 /* LinearPartitionTests.m */; };
+		FE04D0F21C29B6BD00332404 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04D0F11C29B6BD00332404 /* TableViewController.m */; };
+		FE04D0F51C29B6F500332404 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04D0F41C29B6F500332404 /* TableViewCell.m */; };
 		FEC5FB7B1C23172500F9261D /* NHCollagePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5FB7A1C23172500F9261D /* NHCollagePhoto.m */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +136,10 @@
 		FDDD339918218D6500314905 /* UIImage+Decompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompression.h"; sourceTree = "<group>"; };
 		FDDD339A18218D6500314905 /* UIImage+Decompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompression.m"; sourceTree = "<group>"; };
 		FDFDF5131851D25500922D68 /* LinearPartitionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearPartitionTests.m; sourceTree = "<group>"; };
+		FE04D0F01C29B6BD00332404 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		FE04D0F11C29B6BD00332404 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		FE04D0F31C29B6F500332404 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		FE04D0F41C29B6F500332404 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		FEC5FB791C23172500F9261D /* NHCollagePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHCollagePhoto.h; sourceTree = "<group>"; };
 		FEC5FB7A1C23172500F9261D /* NHCollagePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHCollagePhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +213,10 @@
 				50CAF4DD180430A6009A7FA1 /* ViewController.m */,
 				CE0451FD1C228A3E00E20449 /* DemoViewController.h */,
 				CE0451FE1C228A3E00E20449 /* DemoViewController.m */,
+				FE04D0F01C29B6BD00332404 /* TableViewController.h */,
+				FE04D0F11C29B6BD00332404 /* TableViewController.m */,
+				FE04D0F31C29B6F500332404 /* TableViewCell.h */,
+				FE04D0F41C29B6F500332404 /* TableViewCell.m */,
 				FD9D1F67181FBFC600F17457 /* ImageCell.h */,
 				FD9D1F68181FBFC600F17457 /* ImageCell.m */,
 				FDDD339918218D6500314905 /* UIImage+Decompression.h */,
@@ -500,7 +510,9 @@
 				FD9D1F69181FBFC600F17457 /* ImageCell.m in Sources */,
 				CE0451F41C225D3D00E20449 /* NHCollagePreView.m in Sources */,
 				50CAF4D4180430A6009A7FA1 /* main.m in Sources */,
+				FE04D0F51C29B6F500332404 /* TableViewCell.m in Sources */,
 				CE0451FF1C228A3E00E20449 /* DemoViewController.m in Sources */,
+				FE04D0F21C29B6BD00332404 /* TableViewController.m in Sources */,
 				FDDD339B18218D6500314905 /* UIImage+Decompression.m in Sources */,
 				FEC5FB7B1C23172500F9261D /* NHCollagePhoto.m in Sources */,
 				FDC8070D182B84C600ADF578 /* NHBalancedFlowLayout.m in Sources */,

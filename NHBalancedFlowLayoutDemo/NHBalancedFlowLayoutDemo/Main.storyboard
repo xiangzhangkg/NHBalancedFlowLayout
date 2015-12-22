@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="TE5-Tl-FMQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iI7-WB-NZb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -56,6 +56,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwQ-wd-Oo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="649" y="1194"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="PAE-2I-yiB">
+            <objects>
+                <tableViewController id="iI7-WB-NZb" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LO8-St-irR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" tag="101" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="RhF-cJ-fY7" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RhF-cJ-fY7" id="7J1-1s-g3x">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEC-T6-Prq" customClass="NHCollagePreView">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43.5" id="vvO-zm-Di0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NEC-T6-Prq" secondAttribute="trailing" id="IY4-eq-TIF"/>
+                                        <constraint firstAttribute="bottom" secondItem="NEC-T6-Prq" secondAttribute="bottom" id="Rhl-B7-fYy"/>
+                                        <constraint firstItem="NEC-T6-Prq" firstAttribute="leading" secondItem="7J1-1s-g3x" secondAttribute="leading" id="g9B-KT-cks"/>
+                                        <constraint firstItem="NEC-T6-Prq" firstAttribute="top" secondItem="7J1-1s-g3x" secondAttribute="top" id="wtR-8U-BJe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collagePreView" destination="NEC-T6-Prq" id="sem-Ex-uaz"/>
+                                    <outlet property="heightConstraint" destination="vvO-zm-Di0" id="eSR-YQ-Bet"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iI7-WB-NZb" id="eBK-6v-Ncn"/>
+                            <outlet property="delegate" destination="iI7-WB-NZb" id="evO-xx-FOc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUg-bG-N3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="1139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KxW-bK-zto">

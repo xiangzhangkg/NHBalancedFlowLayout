@@ -82,14 +82,12 @@
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
 }
 
-#pragma mark - Layout
-
-- (void)prepareLayout
-{
-    [super prepareLayout];
-    
-    NSAssert([self.delegate conformsToProtocol:@protocol(NHBalancedFlowLayoutDelegate)], @"UICollectionView delegate should conform to BalancedFlowLayout protocol");
-    
+/**
+ *  Calculate collectionView contentSize
+ *
+ *  @return contentSize
+ */
+- (CGSize)calculateContentSize {
     CGFloat idealHeight = self.preferredRowSize;
     if (idealHeight == 0) {
         if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
@@ -114,7 +112,7 @@
     
     for (int section = 0; section < [self.collectionView numberOfSections]; section++) {
         // add new item frames array to sections array
-        NSInteger numberOfItemsInSections = [self.collectionView numberOfItemsInSection:section];
+        NSInteger numberOfItemsInSections = [self.delegate collectionView:self.collectionView numberOfItemsInSection:section];
         CGRect *itemFrames = (CGRect *)malloc(sizeof(CGRect) * numberOfItemsInSections);
         _itemFrameSections[section] = itemFrames;
         
@@ -164,8 +162,19 @@
     self.footerFrames = [footerFrames copy];
     
     self.contentSize = contentSize;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(finishCalculateContentSize:)]) {
-        [self.delegate finishCalculateContentSize:contentSize];
+    
+    return contentSize;
+}
+
+#pragma mark - Layout
+
+- (void)prepareLayout
+{
+    [super prepareLayout];
+    
+    NSAssert([self.delegate conformsToProtocol:@protocol(NHBalancedFlowLayoutDelegate)], @"UICollectionView delegate should conform to BalancedFlowLayout protocol");
+    if (CGSizeEqualToSize(self.contentSize, CGSizeZero)) {
+        [self calculateContentSize];
     }
 }
 
@@ -188,7 +197,7 @@
             [layoutAttributes addObject:headerAttributes];
         }
             
-        for (int i = 0; i < [self.collectionView numberOfItemsInSection:section]; i++) {
+        for (int i = 0; i < [self.delegate collectionView:self.collectionView numberOfItemsInSection:section]; i++) {
             CGRect itemFrame = _itemFrameSections[section][i];
             if (CGRectIntersectsRect(rect, itemFrame)) {
                 NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:section];
@@ -263,7 +272,7 @@
 - (CGFloat)totalItemSizeForSection:(NSInteger)section preferredRowSize:(CGFloat)preferredRowSize
 {
     CGFloat totalItemSize = 0;
-    for (NSInteger i = 0, n = [self.collectionView numberOfItemsInSection:section]; i < n; i++) {
+    for (NSInteger i = 0, n = [self.delegate collectionView:self.collectionView numberOfItemsInSection:section]; i < n; i++) {
         CGSize preferredSize = [self.delegate collectionView:self.collectionView layout:self preferredSizeForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:section]];
         
         if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
@@ -280,7 +289,7 @@
 - (NSArray *)weightsForItemsInSection:(NSInteger)section
 {
     NSMutableArray *weights = [NSMutableArray array];
-    for (NSInteger i = 0, n = [self.collectionView numberOfItemsInSection:section]; i < n; i++) {
+    for (NSInteger i = 0, n = [self.delegate collectionView:self.collectionView numberOfItemsInSection:section]; i < n; i++) {
         CGSize preferredSize = [self.delegate collectionView:self.collectionView layout:self preferredSizeForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:section]];
         NSInteger aspectRatio = self.scrollDirection == UICollectionViewScrollDirectionVertical ? roundf((preferredSize.width / preferredSize.height) * 100) : roundf((preferredSize.height / preferredSize.width) * 100);
         [weights addObject:@(aspectRatio)];

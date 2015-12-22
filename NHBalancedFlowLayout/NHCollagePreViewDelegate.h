@@ -12,10 +12,9 @@
 
 @protocol NHCollagePreViewDelegate <NSObject>
 
-@required
+@optional
 - (void)finishCalculateContentSize:(CGSize)aSize;
 
-@optional
 - (void)collagePreView:(NHCollagePreView *)collagePreView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

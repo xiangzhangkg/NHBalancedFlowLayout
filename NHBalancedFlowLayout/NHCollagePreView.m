@@ -62,10 +62,13 @@ static NSString *NHCollageCellIdentifier = @"NHCollageCell";
 #pragma mark - Setter
 
 - (void)setPhotos:(NSArray<NHCollagePhoto *> *)photos {
-    NSAssert((_delegate && [_delegate respondsToSelector:@selector(finishCalculateContentSize:)]), @"You should conform to NHCollagePreViewDelegate required protocol");
     _photoArr = photos;
     // empty array
     if (_photoArr.count == 0) {
+        _contentSize = CGSizeZero;
+        if (_delegate && [_delegate respondsToSelector:@selector(finishCalculateContentSize:)]) {
+            [_delegate finishCalculateContentSize:_contentSize];
+        }
         return;
     }
     // set numberOfRows
@@ -77,6 +80,10 @@ static NSString *NHCollageCellIdentifier = @"NHCollageCell";
         }
     } else {
         _collectionViewLayout.numberOfRows = 2;
+    }
+    _contentSize = [_collectionViewLayout calculateContentSize];
+    if (_delegate && [_delegate respondsToSelector:@selector(finishCalculateContentSize:)]) {
+        [_delegate finishCalculateContentSize:_contentSize];
     }
 }
 
@@ -169,14 +176,12 @@ static NSString *NHCollageCellIdentifier = @"NHCollageCell";
 
 #pragma mark - NHBalancedFlowLayoutDelegate
 
-- (void)finishCalculateContentSize:(CGSize)aSize {
-    if (_delegate && [_delegate respondsToSelector:@selector(finishCalculateContentSize:)]) {
-        [_delegate finishCalculateContentSize:aSize];
-    }
-}
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(NHBalancedFlowLayout *)collectionViewLayout preferredSizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"~~~~~~%lu~~~~~~%ld",(unsigned long)_photoArr.count, (long)indexPath.item);
+    if (_photoArr.count == 4 && indexPath.item == 4) {
+        NSLog(@"aa");
+    }
     NHCollagePhoto *photo = _photoArr[indexPath.item];
     if (photo.image) {
         return photo.image.size;

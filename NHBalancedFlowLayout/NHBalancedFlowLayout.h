@@ -47,6 +47,13 @@
 // The scroll direction of the grid.
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
 
+/**
+ *  Calculate collectionView contentSize
+ *
+ *  @return contentSize
+ */
+- (CGSize)calculateContentSize;
+
 @end
 
 
@@ -55,6 +62,6 @@
 @required
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(NHBalancedFlowLayout *)collectionViewLayout preferredSizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
-- (void)finishCalculateContentSize:(CGSize)aSize;
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;
 
 @end

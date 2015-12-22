@@ -18,6 +18,9 @@
 // The photos datasource with NHCollagePhoto object
 @property(nonatomic, copy) NSArray<NHCollagePhoto *> *photos;
 
+// The contentSize of collage view
+@property(nonatomic, assign) CGSize contentSize;
+
 // The max number of collage will show, more will show "+N"
 @property(nonatomic, assign) NSInteger maxNumber;
 
